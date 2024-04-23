@@ -1,0 +1,131 @@
+*, *::after, *::before { 
+    box-sizing: border-box;
+  }
+  body {
+      background-color: #d8edf5; 
+      color: #f8ada2;
+      font-family: Lato, sans-serif; 
+      letter-spacing: .1em;
+      margin: 0;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+  button{
+      background-color: #f8ada2;
+      width: 400px;
+      height: 50px;
+      color: #d8edf5;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      font-family: cursive;
+  }
+    
+    .title {
+      font-size: 90px; 
+      font-family: Komtit; 
+      font-weight: bolder;
+      margin: 35px 0 20px 0;
+      padding: 0;
+    }
+    
+    .subTitle {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 30px;
+      font-family: Komtit;
+    }
+    
+    .titles {
+      background-color: #5ba099;
+      padding: 1px 0 1px; 
+    }
+
+  .cards {
+    margin: 1;
+    display: grid;
+    grid-template-columns: 1fr 9rem auto 1fr;
+    grid-template-rows: 15rem 7rem 15rem;
+    gap: .9rem;
+    cursor: pointer;
+    justify-content: center;
+  }
+  
+  .deck {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    grid-column-start: 2;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: .5rem;
+    color: #f8ada2;
+    user-select: none;
+  }
+  
+  .computer-deck {
+    background-color: rgb(99, 221, 237);
+  }
+  
+  .player-deck {
+    background-color: rgb(109, 239, 189);
+  }
+  
+  .text {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    grid-column: 2 / 4;
+  }
+  
+  .card {
+    position: relative;
+    height: 100%;
+    width: 9rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  
+  .card.red {
+    color: red;
+  }
+  
+  .card.black {
+    color: black;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+  }
+  
+  .card::before {
+    top: .5rem;
+    left: .5rem
+  }
+  
+  .card::after {
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+  }
+
+  .card-container {
+    display: flex;
+    width: 100%;
+    grid-column-start: 3;
+    gap: 10px;
+  }
